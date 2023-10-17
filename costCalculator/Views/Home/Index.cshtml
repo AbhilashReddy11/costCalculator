@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>LLM Cost Calculator</title>
+</head>
+<body>
+    <h1>LLM Cost Calculator</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Basic Information</h4>
+                <p>Your Input Prompt:</p>
+                <textarea id="promptText" rows="6" cols="40"></textarea>
+                <p>Token Count: <span id="tokenCount">0</span></p>
+            </div>
+            <div class="col-md-4">
+                <h4>Execute a Simulation</h4>
+                <label>Select an LLM:</label>
+                <select id="selectedLLM">
+                    <option>GPT-3.5-Turbo</option>
+                    <option>GPT-4</option>
+                </select>
+                <br /><br />
+                <label>Average number of Employees:</label>
+                <input type="range" id="averageEmployees" min="0" max="200" />
+                <p id="employeesValue">0</p>
+                <br />
+                <label>Average Prompt Frequency (Per Day)/Employee:</label>
+                <input type="range" id="averageFrequency" min="0" max="300" />
+                <p id="frequencyValue">0</p>
+                <br />
+                <label>Average Prompt Tokens Length:</label>
+                <input type="range" id="averagePromptTokens" min="0" max="300" />
+                <p id="promptTokensValue">0</p>
+                <br />
+                <label>Average Completions Tokens Length:</label>
+                <input type="range" id="averageCompletionsTokens" min="0" max="1000" />
+                <p id="completionsTokensValue">0</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Cost Analysis</h4>
+                <p>Cost Per Day: <span id="costPerDay">0</span> $</p>
+                <p>Cost Per Month: <span id="costPerMonth">0</span> $</p>
+                <p>Cost Per Year: <span id="costPerYear">0</span> $</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/app.js"></script>
+
+</body>
+</html>
